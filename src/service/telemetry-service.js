@@ -85,7 +85,9 @@ class TelemetryService {
     getProxyRequestObj(req, data) {
         const headers = { 'authorization': 'Bearer ' + config.proxyAuthKey };
         if (req.get('content-type')) headers['content-type'] = req.get('content-type');
-        if (req.get('content-encoding')) headers['content-encoding'] = req.get('content-encoding');
+        // ISSUE : Due to below header mobile telemetry is not submitting successfully.
+        // FIX: Commenting below line
+        // if (req.get('content-encoding')) headers['content-encoding'] = req.get('content-encoding');
         return {
             url: this.config.proxyURL,
             headers: headers,
