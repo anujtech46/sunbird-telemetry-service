@@ -1,6 +1,6 @@
 {
   "name": "telemetry-service",
-  "version": "1.10.0",
+  "version": "1.10.1",
   "main": "app.js",
   "author": "forwater",
   "scripts": {
